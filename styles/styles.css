@@ -125,7 +125,7 @@ html {
 }
 
 @media (max-width: 768px) {
-  .theme-dropdown{
+  .theme-dropdown {
     left: 0;
   }
 }
@@ -328,28 +328,12 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue) 0%,
-    var(--secondary-blue) 100%
-  );
+  background-image: linear-gradient(rgb(9 38 67 / 50%), rgb(10 83 155 / 50%)),
+    url(../img/sala-de-servidores-de-renderizado-3d-o-centro-de-datos.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: -2;
-}
-
-.tech-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 20s linear infinite;
-  z-index: -1;
 }
 
 @keyframes gridMove {
@@ -413,6 +397,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
+  color: white;
 }
 
 @keyframes bounce {
@@ -1928,7 +1913,7 @@ html {
     font-size: 1.5rem;
   }
 
-  .service-overview-content{
+  .service-overview-content {
     display: flex;
     flex-direction: column;
     align-items: center;

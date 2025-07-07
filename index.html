@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCD Sistemas - Tecnología que impulsa tu mundo</title>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script defer src="scripts/script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>FCD Sistemas</h2>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#empresa" class="nav-link">Empresa</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#clientes" class="nav-link">Clientes</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+          <button class="theme-btn" id="theme-toggle" title="Cambiar tema">
+            <i class="fas fa-sun" id="theme-icon"></i>
+          </button>
+          <div class="theme-dropdown" id="theme-dropdown">
+            <button class="theme-option" data-theme="light">
+              <i class="fas fa-sun"></i>
+              <span>Claro</span>
+            </button>
+            <button class="theme-option" data-theme="dark">
+              <i class="fas fa-moon"></i>
+              <span>Oscuro</span>
+            </button>
+            <button class="theme-option" data-theme="system">
+              <i class="fas fa-desktop"></i>
+              <span>Sistema</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-background">
+        <div class="tech-grid"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">FCD Sistemas</h1>
+        <p class="hero-subtitle">Tecnología que impulsa tu mundo</p>
+        <p class="hero-description">
+          Soluciones tecnológicas innovadoras para empresas que buscan el futuro
+        </p>
+        <button class="cta-button" onclick="scrollToSection('contacto')">
+          Comenzar ahora
+        </button>
+      </div>
+      <div class="hero-scroll">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- Empresa Section -->
+    <section id="empresa" class="section">
+      <div class="container">
+        <h2 class="section-title">Nuestra Empresa</h2>
+
+        <div id="quienes-somos" class="subsection">
+          <div class="content-grid">
+            <div class="content-text">
+              <h3>Quiénes Somos</h3>
+              <p>
+                FCD Sistemas es una empresa líder en soluciones tecnológicas,
+                especializada en brindar servicios de alta calidad que
+                transforman la manera en que las empresas operan en el mundo
+                digital.
+              </p>
+              <p>
+                Nuestro equipo de expertos combina experiencia técnica con
+                innovación para ofrecer soluciones personalizadas que impulsan
+                el crecimiento de nuestros clientes.
+              </p>
+            </div>
+            <div class="content-image">
+              <div class="tech-card">
+                <i class="fas fa-users fa-3x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="historia" class="subsection">
+          <div class="content-grid reverse">
+            <div class="content-image">
+              <div class="tech-card">
+                <i class="fas fa-history fa-3x"></i>
+              </div>
+            </div>
+            <div class="content-text">
+              <h3>Nuestra Historia</h3>
+              <p>
+                Fundada con la visión de democratizar el acceso a la tecnología
+                avanzada, FCD Sistemas ha crecido desde sus humildes comienzos
+                hasta convertirse en un referente del sector.
+              </p>
+              <p>
+                A lo largo de los años, hemos evolucionado constantemente,
+                adaptándonos a las nuevas tendencias tecnológicas y manteniendo
+                siempre nuestro compromiso con la excelencia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios Section Simplificada -->
+    <section id="servicios" class="section alt-bg">
+      <div class="container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <p class="section-subtitle">
+          Soluciones tecnológicas especializadas con más de 15 años de
+          experiencia
+        </p>
+
+        <div class="services-overview">
+          <!-- Mantenimiento IT Card -->
+          <div class="service-overview-card">
+            <div class="service-overview-header">
+              <div class="service-overview-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Mantenimiento IT</h3>
+            </div>
+            <div class="service-overview-content">
+              <p>
+                Servicios completos de mantenimiento preventivo y correctivo
+                para mantener tu infraestructura tecnológica funcionando de
+                manera óptima.
+              </p>
+              <div class="service-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-clock"></i>
+                  <span>Respuesta < 24h</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-headset"></i>
+                  <span>Soporte 24/7</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Seguridad Avanzada</span>
+                </div>
+              </div>
+              <a href="html/mantenimiento.html" class="service-detail-btn">
+                Ver Detalles
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Gaming Card -->
+          <div class="service-overview-card gaming">
+            <div class="service-overview-header">
+              <div class="service-overview-icon gaming">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <h3>Gaming</h3>
+            </div>
+            <div class="service-overview-content">
+              <p>
+                Soluciones especializadas para el mundo gaming con 15 años de
+                experiencia colaborando con líderes de la industria como Tequila
+                Works.
+              </p>
+              <div class="service-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-trophy"></i>
+                  <span>15 años experiencia</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-users"></i>
+                  <span>150+ puestos</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-star"></i>
+                  <span>Partner Tequila Works</span>
+                </div>
+              </div>
+              <a href="html/gaming.html" class="service-detail-btn gaming">
+                Ver Detalles
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="services-cta">
+          <h3>¿Necesitas una solución personalizada?</h3>
+          <p>Contacta con nuestros expertos para una consulta gratuita</p>
+          <button class="cta-button" onclick="scrollToSection('contacto')">
+            Consulta Gratuita
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clientes Section -->
+    <section id="clientes" class="section">
+      <div class="container">
+        <h2 class="section-title">Nuestros Clientes</h2>
+
+        <!-- Cliente Destacado -->
+        <div class="featured-client">
+          <div class="client-logo-section">
+            <div class="client-logo-placeholder">
+              <i class="fas fa-gamepad fa-3x"></i>
+              <h3>Tequila Works</h3>
+            </div>
+          </div>
+          <div class="client-info">
+            <h4>Partner Tecnológico Oficial</h4>
+            <p>
+              15 años de colaboración exitosa con Tequila Works, líder en
+              desarrollo de videojuegos. Gestionamos más de 150 puestos de
+              trabajo y toda su infraestructura tecnológica.
+            </p>
+            <div class="client-stats">
+              <div class="stat">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Años de colaboración</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">Puestos gestionados</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Soporte continuo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid de logos de clientes -->
+        <div class="clients-logo-grid">
+          <img src="img/tequilaworks_Logo.png" alt="Cliente 1" class="client-logo-img" />
+          <img src="img/mazabi_logo.png" alt="Cliente 2" class="client-logo-img" />
+          <img src="img/openretail_logo.png" alt="Cliente 3" class="client-logo-img" />
+          <img src="img/rolex_logo.svg" alt="Cliente 4" class="client-logo-img" />
+          <img src="img/seopan_logo.png" alt="Cliente 5" class="client-logo-img" />
+          <img src="img/snsmarketing_logo.svg" alt="Cliente 6" class="client-logo-img" />
+        </div>
+
+        <div class="clients-grid">
+          <div class="client-testimonial">
+            <div class="testimonial-content">
+              <p>
+                "FCD Sistemas ha sido nuestro partner tecnológico durante 15
+                años. Su expertise en gaming y desarrollo es incomparable."
+              </p>
+              <div class="testimonial-author">
+                <strong>Tequila Works</strong>
+                <span>Estudio de Desarrollo de Videojuegos</span>
+              </div>
+            </div>
+          </div>
+          <div class="client-testimonial">
+            <div class="testimonial-content">
+              <p>
+                "El soporte técnico es increíble. Siempre disponibles y con
+                soluciones efectivas para cualquier problema."
+              </p>
+              <div class="testimonial-author">
+                <strong>Carlos Rodríguez</strong>
+                <span>CTO, InnovaSoft</span>
+              </div>
+            </div>
+          </div>
+          <div class="client-testimonial">
+            <div class="testimonial-content">
+              <p>
+                "Su respuesta en menos de 24 horas nos ha salvado en múltiples
+                ocasiones críticas."
+              </p>
+              <div class="testimonial-author">
+                <strong>Ana Martínez</strong>
+                <span>IT Manager, TechCorp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="section alt-bg">
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-grid">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="service">Servicio de interés</label>
+                <select id="service" name="service">
+                  <option value="">Selecciona un servicio</option>
+                  <option value="mantenimiento-it">Mantenimiento IT</option>
+                  <option value="gaming">Gaming</option>
+                  <option value="consultoria">Consultoría</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-button">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Dirección</h4>
+                <p>Av. Tecnología 123. Ciudad Digital, CD 12345</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Teléfono</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>info@fcdsistemas.com</p>
+              </div>
+            </div>
+            <div class="response-guarantee">
+              <i class="fas fa-clock"></i>
+              <h4>Garantía de Respuesta</h4>
+              <p>
+                <strong>Menos de 24 horas</strong><br />Soporte 24/7 disponible
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>FCD Sistemas</h3>
+            <p>Tecnología que impulsa tu mundo</p>
+            <div class="footer-highlight">
+              <i class="fas fa-award"></i>
+              <span>15 años de experiencia en Gaming</span>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Servicios</h4>
+            <a href="html/mantenimiento.html">Mantenimiento IT</a>
+            <a href="html/gaming.html">Gaming</a>
+          </div>
+          <div class="footer-section">
+            <h4>Enlaces</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#empresa">Empresa</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+          <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 FCD Sistemas. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

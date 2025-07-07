@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantenimiento IT - FCD Sistemas</title>
+
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script defer src="../scripts/script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html"><h2>FCD Sistemas</h2></a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="../index.html" class="nav-link">Inicio</a>
+          <a href="../index.html#empresa" class="nav-link">Empresa</a>
+          <a href="../index.html#servicios" class="nav-link">Servicios</a>
+          <a href="../index.html#clientes" class="nav-link">Clientes</a>
+          <a href="../index.html#contacto" class="nav-link">Contacto</a>
+        </div>
+
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+          <button class="theme-btn" id="theme-toggle" title="Cambiar tema">
+            <i class="fas fa-sun" id="theme-icon"></i>
+          </button>
+          <div class="theme-dropdown" id="theme-dropdown">
+            <button class="theme-option" data-theme="light">
+              <i class="fas fa-sun"></i>
+              <span>Claro</span>
+            </button>
+            <button class="theme-option" data-theme="dark">
+              <i class="fas fa-moon"></i>
+              <span>Oscuro</span>
+            </button>
+            <button class="theme-option" data-theme="system">
+              <i class="fas fa-desktop"></i>
+              <span>Sistema</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="../index.html">Inicio</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#servicios">Servicios</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Mantenimiento IT</span>
+      </div>
+    </div>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="service-hero-content">
+          <div class="service-hero-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h1>Mantenimiento IT</h1>
+          <p>
+            Servicios completos de mantenimiento y soporte técnico para mantener
+            tu infraestructura funcionando de manera óptima
+          </p>
+          <div class="service-hero-badges">
+            <div class="hero-badge">
+              <i class="fas fa-clock"></i>
+              <span>Respuesta < 24h</span>
+            </div>
+            <div class="hero-badge">
+              <i class="fas fa-headset"></i>
+              <span>Soporte 24/7</span>
+            </div>
+            <div class="hero-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>Seguridad Avanzada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+      <div class="container">
+        <!-- Mantenimientos Preventivos -->
+        <div class="service-subsection">
+          <div class="subsection-header">
+            <i class="fas fa-calendar-check"></i>
+            <h2>Mantenimientos Preventivos</h2>
+            <span class="highlight-badge"
+              >ACTUAMOS ANTES DE QUE SURJAN LOS PROBLEMAS</span
+            >
+          </div>
+          <div class="subsection-content">
+            <div class="feature-grid">
+              <div class="feature-item">
+                <i class="fas fa-clock"></i>
+                <h3>Visitas Programadas</h3>
+                <p>
+                  Nuestros técnicos no esperan a que surjan los problemas.
+                  Realizan visitas programadas a tus oficinas para garantizar
+                  que tus sistemas funcionen a la perfección.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-bolt"></i>
+                <h3>Respuesta Rápida</h3>
+                <p>
+                  Si surge algo inesperado, nuestra promesa es clara:
+                  <strong>ACTUAMOS EN MENOS DE 24 HORAS</strong>. En muchos
+                  casos, solucionamos el problema el mismo día.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <h3>Atención 24/7</h3>
+                <p>
+                  Ofrecemos soporte 24/7. Contacto directo con su técnico por
+                  teléfono, email o asistencia remota.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicios Integrales -->
+        <div class="service-subsection">
+          <div class="subsection-header">
+            <i class="fas fa-cogs"></i>
+            <h2>Servicios Integrales</h2>
+            <span class="highlight-badge"
+              >MÁS ALLÁ DEL MANTENIMIENTO BÁSICO</span
+            >
+          </div>
+          <div class="subsection-content">
+            <div class="feature-grid">
+              <div class="feature-item">
+                <i class="fas fa-user-tie"></i>
+                <h3>Técnico Dedicado</h3>
+                <p>
+                  Un experto que conoce su infraestructura al detalle.
+                  Anticipamos sus necesidades tecnológicas con precisión.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-sync-alt"></i>
+                <h3>Actualizaciones Constantes</h3>
+                <p>
+                  Mantenemos sus servidores y equipos al día. Prevenimos
+                  interrupciones y optimizamos el rendimiento continuamente.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-tasks"></i>
+                <h3>Gestión Integral</h3>
+                <p>
+                  Nos encargamos DE TODO: HARDWARE/SOFTWARE, comunicaciones,
+                  proveedores tecnológicos. Asesoramiento personalizado para
+                  maximizar sus recursos.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-users-cog"></i>
+                <h3>Soporte Humano</h3>
+                <p>
+                  Formación y asistencia directa a su equipo. Facilitamos la
+                  adaptación a nuevas tecnologías y procesos. HELP DESK
+                  COMPLETO.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seguridad de Datos -->
+        <div class="service-subsection">
+          <div class="subsection-header">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Seguridad de Datos</h2>
+            <span class="highlight-badge"
+              >PROTECCIÓN AVANZADA PARA SU EMPRESA</span
+            >
+          </div>
+          <div class="subsection-content">
+            <div class="feature-grid">
+              <div class="feature-item">
+                <i class="fas fa-search"></i>
+                <h3>Auditorías de Seguridad Personalizadas</h3>
+                <p>
+                  Evaluamos tus vulnerabilidades específicas. Diseñamos
+                  estrategias de protección adaptadas a tu infraestructura
+                  única.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-lock"></i>
+                <h3>Protección Avanzada de Datos y Redes</h3>
+                <p>
+                  Implementamos las últimas tecnologías en ciberseguridad.
+                  Mantenemos tus activos digitales a salvo de amenazas
+                  emergentes.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-key"></i>
+                <h3>Gestión de Acceso e Identidades</h3>
+                <p>
+                  Control riguroso sobre quién accede a tu información.
+                  Garantizamos la integridad de sus datos sensibles.
+                </p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-eye"></i>
+                <h3>Monitoreo y Respuesta Rápida</h3>
+                <p>
+                  Vigilancia continua de tu infraestructura IT. Actuamos
+                  inmediatamente ante cualquier indicio de compromiso de
+                  seguridad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Listo para optimizar tu infraestructura IT?</h2>
+          <p>
+            Contacta con nuestros expertos para una evaluación gratuita de tus
+            sistemas
+          </p>
+          <div class="cta-buttons">
+            <a href="../index.html#contacto" class="cta-button primary"
+              >Consulta Gratuita</a
+            >
+            <a href="gaming.html" class="cta-button secondary">Ver Gaming</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>FCD Sistemas</h3>
+            <p>Tecnología que impulsa tu mundo</p>
+            <div class="footer-highlight">
+              <i class="fas fa-award"></i>
+              <span>15 años de experiencia en Gaming</span>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Servicios</h4>
+            <a href="mantenimiento.html">Mantenimiento IT</a>
+            <a href="gaming.html">Gaming</a>
+          </div>
+          <div class="footer-section">
+            <h4>Enlaces</h4>
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#empresa">Empresa</a>
+            <a href="../index.html#servicios">Servicios</a>
+            <a href="../index.html#contacto">Contacto</a>
+          </div>
+          <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 FCD Sistemas. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

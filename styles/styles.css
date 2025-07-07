@@ -110,7 +110,7 @@ html {
 .theme-dropdown {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   background: var(--dropdown-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -371,7 +371,6 @@ html {
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--light-blue);
   animation: fadeInUp 1s ease 0.2s both;
 }
 
@@ -481,14 +480,19 @@ html {
   gap: 4rem;
   align-items: center;
   margin-bottom: 4rem;
+  grid-template-areas: 'text image';
 }
 
 .content-grid.reverse {
-  direction: rtl;
+  grid-template-areas: 'image text';
 }
 
-.content-grid.reverse > * {
-  direction: ltr;
+.content-text {
+  grid-area: text;
+}
+
+.content-image {
+  grid-area: image;
 }
 
 .content-text h3 {
@@ -752,7 +756,7 @@ html {
 
 .footer-section a:hover {
   transform: translateY(-2px);
-background-color: var(--accent-blue);
+  background-color: var(--accent-blue);
 }
 
 .social-links {
@@ -839,7 +843,15 @@ background-color: var(--accent-blue);
 
   .content-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-areas:
+      'text'
+      'image';
+  }
+
+  .content-grid.reverse {
+    grid-template-areas:
+      'text'
+      'image';
   }
 
   .services-grid {
@@ -1907,6 +1919,12 @@ background-color: var(--accent-blue);
 
   .service-overview-header h3 {
     font-size: 1.5rem;
+  }
+
+  .service-overview-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .service-highlights {

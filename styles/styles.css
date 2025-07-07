@@ -110,7 +110,7 @@ html {
 .theme-dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   background: var(--dropdown-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -124,7 +124,13 @@ html {
   z-index: 1000;
 }
 
-.theme-switcher:hover .theme-dropdown {
+@media (max-width: 768px) {
+  .theme-dropdown{
+    left: 0;
+  }
+}
+
+.theme-dropdown.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

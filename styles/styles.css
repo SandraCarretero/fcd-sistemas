@@ -506,6 +506,12 @@ img {
   grid-template-areas: 'text image';
 }
 
+@media (max-width: 768px) {
+  .content-grid {
+    gap: 2rem;
+  }
+}
+
 .content-grid.reverse {
   grid-template-areas: 'image text';
 }

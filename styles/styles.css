@@ -318,6 +318,14 @@ img {
   border-radius: 2px;
 }
 
+.bar:nth-child(1) {
+  background-color: #1986e0;
+}
+
+.bar:nth-child(2) {
+  background-color: #10539b;
+}
+
 /* Hero Section */
 .hero {
   height: 100dvh;
@@ -384,7 +392,8 @@ img {
   max-width: 50ch;
   margin-bottom: 1rem;
   /* animation: fadeInUp 1s ease 0.2s both; */
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 .hero-description {
@@ -1924,6 +1933,10 @@ img {
 }
 
 /* Logo link styling */
+.nav-logo {
+  font-size: 0;
+}
+
 .nav-logo a {
   text-decoration: none;
   color: inherit;

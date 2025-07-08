@@ -248,16 +248,16 @@ const typeWriter = (element, text, speed = 10) => {
 };
 
 // Initialize typing effect when page loads
-window.addEventListener('load', () => {
-  const heroSubtitle = document.querySelector('.hero-subtitle');
-  const originalText = heroSubtitle.textContent;
+// window.addEventListener('load', () => {
+//   const heroSubtitle = document.querySelector('.hero-subtitle');
+//   const originalText = heroSubtitle.textContent;
 
-  // Add a small delay before starting the typing effect
-  setTimeout(() => {
-    heroSubtitle.style.visibility = 'visible';
-    typeWriter(heroSubtitle, originalText, 80);
-  }, 1000);
-});
+//   // Add a small delay before starting the typing effect
+//   setTimeout(() => {
+//     heroSubtitle.style.visibility = 'visible';
+//     typeWriter(heroSubtitle, originalText, 80);
+//   }, 1000);
+// });
 
 // Add active state to navigation links based on scroll position
 window.addEventListener('scroll', () => {
@@ -370,4 +370,11 @@ document.addEventListener('DOMContentLoaded', function () {
       gif.style.opacity = 1;
     }, 1000);
   }
+});
+
+window.addEventListener('load', () => {
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  setTimeout(() => {
+    heroSubtitle.style.opacity = 1;
+  }, 2000);
 });

@@ -835,10 +835,11 @@ img {
 
   .nav-toggle.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
+    background: var(--text-primary);
   }
 
   .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 
   .dropdown-content {
@@ -1562,10 +1563,12 @@ img {
   background: #1986e0;
 }
 
-.service-detail-btn:hover {
-  background: linear-gradient(135deg, #e55a2b, #e8841a);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+@media (hover: hover) {
+  .service-detail-btn:hover {
+    background: linear-gradient(135deg, #e55a2b, #e8841a);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+  }
 }
 
 .service-detail-btn i {

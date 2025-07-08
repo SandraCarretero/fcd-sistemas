@@ -1520,6 +1520,12 @@ img {
   color: #fff;
 }
 
+@media (max-width: 768px){
+  .service-overview-content p{
+    text-align: center;
+  }
+}
+
 .service-highlights {
   display: flex;
   flex-wrap: wrap;

@@ -238,6 +238,12 @@ img {
   width: 80%;
 }
 
+@media (max-width: 768px) {
+  .logo {
+    width: 55%;
+  }
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -306,7 +312,7 @@ img {
 .bar {
   width: 25px;
   height: 3px;
-  background: var(--primary-blue);
+  background: var(--text-primary);
   margin: 3px 0;
   transition: 0.3s;
   border-radius: 2px;
@@ -314,7 +320,7 @@ img {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   display: flex;
   align-items: center;
@@ -358,6 +364,12 @@ img {
 
 .hero-content-img {
   width: 45%;
+}
+
+@media (max-width: 768px) {
+  .hero-content-img {
+    width: 80%;
+  }
 }
 
 .hero-title {

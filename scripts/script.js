@@ -1,94 +1,94 @@
 // Theme Management
-class ThemeManager {
-  constructor() {
-    this.currentTheme = localStorage.getItem('theme') || 'system';
-    this.themeToggle = document.getElementById('theme-toggle');
-    this.themeIcon = document.getElementById('theme-icon');
-    this.themeOptions = document.querySelectorAll('.theme-option');
+// class ThemeManager {
+//   constructor() {
+//     this.currentTheme = localStorage.getItem('theme') || 'system';
+//     this.themeToggle = document.getElementById('theme-toggle');
+//     this.themeIcon = document.getElementById('theme-icon');
+//     this.themeOptions = document.querySelectorAll('.theme-option');
 
-    this.init();
-  }
+//     this.init();
+//   }
 
-  init() {
-    this.applyTheme(this.currentTheme);
-    this.updateUI();
-    this.bindEvents();
+//   init() {
+//     this.applyTheme(this.currentTheme);
+//     this.updateUI();
+//     this.bindEvents();
 
-    // Listen for system theme changes
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', () => {
-        if (this.currentTheme === 'system') {
-          this.applySystemTheme();
-        }
-      });
-  }
+//     // Listen for system theme changes
+//     window
+//       .matchMedia('(prefers-color-scheme: dark)')
+//       .addEventListener('change', () => {
+//         if (this.currentTheme === 'system') {
+//           this.applySystemTheme();
+//         }
+//       });
+//   }
 
-  bindEvents() {
-    this.themeOptions.forEach(option => {
-      option.addEventListener('click', e => {
-        const theme = e.currentTarget.dataset.theme;
-        this.setTheme(theme);
-      });
-    });
-  }
+//   bindEvents() {
+//     this.themeOptions.forEach(option => {
+//       option.addEventListener('click', e => {
+//         const theme = e.currentTarget.dataset.theme;
+//         this.setTheme(theme);
+//       });
+//     });
+//   }
 
-  setTheme(theme) {
-    this.currentTheme = theme;
-    localStorage.setItem('theme', theme);
-    this.applyTheme(theme);
-    this.updateUI();
-  }
+//   setTheme(theme) {
+//     this.currentTheme = theme;
+//     localStorage.setItem('theme', theme);
+//     this.applyTheme(theme);
+//     this.updateUI();
+//   }
 
-  applyTheme(theme) {
-    const root = document.documentElement;
+//   applyTheme(theme) {
+//     const root = document.documentElement;
 
-    if (theme === 'system') {
-      root.removeAttribute('data-theme');
-      this.applySystemTheme();
-    } else {
-      root.setAttribute('data-theme', theme);
-    }
-  }
+//     if (theme === 'system') {
+//       root.removeAttribute('data-theme');
+//       this.applySystemTheme();
+//     } else {
+//       root.setAttribute('data-theme', theme);
+//     }
+//   }
 
-  applySystemTheme() {
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    const root = document.documentElement;
+//   applySystemTheme() {
+//     const prefersDark = window.matchMedia(
+//       '(prefers-color-scheme: dark)'
+//     ).matches;
+//     const root = document.documentElement;
 
-    if (this.currentTheme === 'system') {
-      if (prefersDark) {
-        root.setAttribute('data-theme', 'dark');
-      } else {
-        root.setAttribute('data-theme', 'light');
-      }
-    }
-  }
+//     if (this.currentTheme === 'system') {
+//       if (prefersDark) {
+//         root.setAttribute('data-theme', 'dark');
+//       } else {
+//         root.setAttribute('data-theme', 'light');
+//       }
+//     }
+//   }
 
-  updateUI() {
-    // Update active state
-    this.themeOptions.forEach(option => {
-      option.classList.toggle(
-        'active',
-        option.dataset.theme === this.currentTheme
-      );
-    });
+//   updateUI() {
+//     // Update active state
+//     this.themeOptions.forEach(option => {
+//       option.classList.toggle(
+//         'active',
+//         option.dataset.theme === this.currentTheme
+//       );
+//     });
 
-    // Update icon
-    const isDark = this.isDarkMode();
-    this.themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
-  }
+//     // Update icon
+//     const isDark = this.isDarkMode();
+//     this.themeIcon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+//   }
 
-  isDarkMode() {
-    if (this.currentTheme === 'dark') return true;
-    if (this.currentTheme === 'light') return false;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-}
+//   isDarkMode() {
+//     if (this.currentTheme === 'dark') return true;
+//     if (this.currentTheme === 'light') return false;
+//     return window.matchMedia('(prefers-color-scheme: dark)').matches;
+//   }
+// }
 
 // Initialize theme manager
-const themeManager = new ThemeManager();
+// const themeManager = new ThemeManager();
 
 // Mobile Navigation Toggle
 const navToggle = document.getElementById('nav-toggle');
@@ -118,7 +118,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Smooth scrolling for navigation links
-function scrollToSection(sectionId) {
+const scrollToSection = sectionId => {
   const element = document.getElementById(sectionId);
   if (element) {
     const offsetTop = element.offsetTop - 70; // Account for fixed navbar
@@ -127,7 +127,7 @@ function scrollToSection(sectionId) {
       behavior: 'smooth'
     });
   }
-}
+};
 
 // Add click event listeners to navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -203,14 +203,14 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 });
 
 // Parallax effect for hero section
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
-  const parallax = document.querySelector('.tech-grid');
-  if (parallax) {
-    const speed = scrolled * 0.5;
-    parallax.style.transform = `translate(${speed * 0.1}px, ${speed * 0.1}px)`;
-  }
-});
+// window.addEventListener('scroll', () => {
+//   const scrolled = window.scrollY;
+//   const parallax = document.querySelector('.tech-grid');
+//   if (parallax) {
+//     const speed = scrolled * 0.5;
+//     parallax.style.transform = `translate(${speed * 0.1}px, ${speed * 0.1}px)`;
+//   }
+// });
 
 // Add hover effects to service cards
 document.querySelectorAll('.service-card').forEach(card => {
@@ -232,7 +232,7 @@ document.querySelector('.cta-button').addEventListener('click', function () {
 });
 
 // Typing effect for hero subtitle (optional enhancement)
-const typeWriter = (element, text, speed = 100) => {
+const typeWriter = (element, text, speed = 10) => {
   let i = 0;
   element.innerHTML = '';
 
@@ -254,6 +254,7 @@ window.addEventListener('load', () => {
 
   // Add a small delay before starting the typing effect
   setTimeout(() => {
+    heroSubtitle.style.visibility = 'visible';
     typeWriter(heroSubtitle, originalText, 80);
   }, 1000);
 });
@@ -312,48 +313,61 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const toggleBtn = document.getElementById('theme-toggle');
+//   const dropdown = document.getElementById('theme-dropdown');
+//   const options = document.querySelectorAll('.theme-option');
+
+//   toggleBtn.addEventListener('click', function (e) {
+//     e.stopPropagation(); // evita que el click en el botón cierre el menú
+//     dropdown.classList.toggle('open');
+//   });
+
+//   // Ocultar al hacer clic fuera
+//   document.addEventListener('click', function () {
+//     dropdown.classList.remove('open');
+//   });
+
+//   // Evitar que al hacer clic dentro del dropdown lo cierre
+//   dropdown.addEventListener('click', function (e) {
+//     e.stopPropagation();
+//   });
+
+//   // Cerrar menú al elegir una opción
+//   options.forEach(option => {
+//     option.addEventListener('click', function () {
+//       dropdown.classList.remove('open');
+//       // Aquí puedes añadir la lógica para cambiar el tema
+//       const selectedTheme = this.dataset.theme;
+//       document.documentElement.setAttribute('data-theme', selectedTheme);
+//       localStorage.setItem('theme', selectedTheme);
+
+//       // Actualiza clase activa visual
+//       options.forEach(opt => opt.classList.remove('active'));
+//       this.classList.add('active');
+
+//       // Cambia el ícono si quieres
+//       const icon = document.getElementById('theme-icon');
+//       if (selectedTheme === 'light') {
+//         icon.className = 'fas fa-sun';
+//       } else if (selectedTheme === 'dark') {
+//         icon.className = 'fas fa-moon';
+//       } else {
+//         icon.className = 'fas fa-desktop';
+//       }
+//     });
+//   });
+// });
+
+// ... existing code ...
+
 document.addEventListener('DOMContentLoaded', function () {
-  const toggleBtn = document.getElementById('theme-toggle');
-  const dropdown = document.getElementById('theme-dropdown');
-  const options = document.querySelectorAll('.theme-option');
-
-  toggleBtn.addEventListener('click', function (e) {
-    e.stopPropagation(); // evita que el click en el botón cierre el menú
-    dropdown.classList.toggle('open');
-  });
-
-  // Ocultar al hacer clic fuera
-  document.addEventListener('click', function () {
-    dropdown.classList.remove('open');
-  });
-
-  // Evitar que al hacer clic dentro del dropdown lo cierre
-  dropdown.addEventListener('click', function (e) {
-    e.stopPropagation();
-  });
-
-  // Cerrar menú al elegir una opción
-  options.forEach(option => {
-    option.addEventListener('click', function () {
-      dropdown.classList.remove('open');
-      // Aquí puedes añadir la lógica para cambiar el tema
-      const selectedTheme = this.dataset.theme;
-      document.documentElement.setAttribute('data-theme', selectedTheme);
-      localStorage.setItem('theme', selectedTheme);
-
-      // Actualiza clase activa visual
-      options.forEach(opt => opt.classList.remove('active'));
-      this.classList.add('active');
-
-      // Cambia el ícono si quieres
-      const icon = document.getElementById('theme-icon');
-      if (selectedTheme === 'light') {
-        icon.className = 'fas fa-sun';
-      } else if (selectedTheme === 'dark') {
-        icon.className = 'fas fa-moon';
-      } else {
-        icon.className = 'fas fa-desktop';
-      }
-    });
-  });
+  var gif = document.getElementById('gif');
+  if (gif) {
+    gif.style.opacity = 0;
+    setTimeout(function () {
+      gif.style.transition = 'opacity 0.5s';
+      gif.style.opacity = 1;
+    }, 1000);
+  }
 });

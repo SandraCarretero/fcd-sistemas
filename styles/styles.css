@@ -516,6 +516,9 @@ img {
 
 .content-image {
   grid-area: image;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0;
 }
 
 .content-text h3 {
